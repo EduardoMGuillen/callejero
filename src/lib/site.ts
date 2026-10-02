@@ -10,11 +10,10 @@ export const restaurant = {
   whatsapp: "50432631113",
   instagram: "callejero.hn",
   instagramUrl: "https://www.instagram.com/callejero.hn/",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=15.500718,-88.040247",
-  mapEmbed:
-    "https://maps.google.com/maps?q=15.500718,-88.040247&z=16&hl=es&output=embed",
-  lat: 15.500718,
+  mapsUrl: "https://maps.app.goo.gl/jp36hd4DHvv3dLN37",
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=15.5007184,-88.040247&travelmode=driving",
+  lat: 15.5007184,
   lng: -88.040247,
   rating: 4.6,
   reviewCount: 75,

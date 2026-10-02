@@ -1,4 +1,5 @@
 import OpenBadge from "@/components/OpenBadge";
+import RestaurantMap from "@/components/RestaurantMap";
 import { hours, restaurant } from "@/lib/site";
 
 export default function Visit() {
@@ -52,24 +53,21 @@ export default function Visit() {
             </div>
           </dl>
 
-          <a
-            className="btn mt-8"
-            href={restaurant.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cómo llegar
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a className="btn" href={restaurant.directionsUrl} target="_blank" rel="noopener noreferrer">
+              Cómo llegar
+            </a>
+            <a className="btn btn-dark" href={restaurant.mapsUrl} target="_blank" rel="noopener noreferrer">
+              Ver en Google Maps
+            </a>
+          </div>
         </div>
 
-        <div className="relative min-h-[420px] bg-[#d9d1c3] lg:min-h-full">
-          <iframe
-            title="Mapa de Callejero en San Pedro Sula"
-            src={restaurant.mapEmbed}
-            className="absolute inset-0 h-full w-full grayscale"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="relative isolate h-[72vh] min-h-[480px] bg-[#e4dccb] lg:h-auto lg:min-h-[680px]">
+          <RestaurantMap />
+          <p className="pointer-events-none absolute top-4 left-4 bg-[#100e0c] px-3 py-2 text-[11px] tracking-[0.18em] text-[#f4efe4] uppercase">
+            Arrastrá el mapa · el pin es el local
+          </p>
         </div>
       </div>
     </section>
