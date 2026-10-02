@@ -90,7 +90,10 @@ export default function Header() {
           </ul>
           <div className="space-y-4">
             <OpenBadge />
-            <a className="btn w-full" href={`tel:${restaurant.phoneTel}`}>
+            <a className="btn w-full" href={waLink("Hola Callejero, vengo de la web.")}>
+              WhatsApp {restaurant.phoneDisplay}
+            </a>
+            <a className="btn btn-ghost w-full" href={`tel:${restaurant.phoneTel}`}>
               Llamar {restaurant.phoneDisplay}
             </a>
           </div>

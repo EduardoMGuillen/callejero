@@ -1,6 +1,6 @@
 import OpenBadge from "@/components/OpenBadge";
 import RestaurantMap from "@/components/RestaurantMap";
-import { hours, restaurant } from "@/lib/site";
+import { hours, restaurant, waLink } from "@/lib/site";
 
 export default function Visit() {
   return (
@@ -31,7 +31,20 @@ export default function Visit() {
               </dd>
             </div>
             <div>
-              <dt className="kicker text-black/45">WhatsApp y teléfono</dt>
+              <dt className="kicker text-black/45">WhatsApp</dt>
+              <dd className="mt-1 text-xl">
+                <a
+                  className="underline decoration-black/20 underline-offset-4 hover:decoration-[#e30613]"
+                  href={waLink("Hola Callejero, vengo de la web.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {restaurant.phoneDisplay}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="kicker text-black/45">Teléfono</dt>
               <dd className="mt-1 text-xl">
                 <a className="underline decoration-black/20 underline-offset-4 hover:decoration-[#e30613]" href={`tel:${restaurant.phoneTel}`}>
                   {restaurant.phoneDisplay}
