@@ -40,20 +40,20 @@ export default function RestaurantMap() {
 
       const icon = L.divIcon({
         className: "calle-pin-wrap",
-        html: '<span class="calle-pin"><span>CJ</span></span>',
+        html: '<span class="calle-pin"><span>C</span></span>',
         iconSize: [52, 64],
         iconAnchor: [26, 60],
         popupAnchor: [0, -54],
       });
 
-      const marker = L.marker(view, { icon, title: "Callejero", alt: "Callejero, 19 Calle Sur" }).addTo(map);
+      const marker = L.marker(view, { icon, title: "Callejero", alt: "Callejero, River Plaza, 19 av. 9 calle" }).addTo(map);
 
       marker.bindPopup(
         `<div class="calle-card">
           <p class="calle-kicker">San Pedro Sula</p>
           <p class="calle-name">Callejero</p>
-          <p>19 Calle Sur, Cortés</p>
-          <p class="calle-note">Handmade smash burgers</p>
+          <p>River Plaza, 19 av. 9 calle</p>
+          <p class="calle-note">De calle pero elegante</p>
           <a href="${restaurant.directionsUrl}" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
         </div>`,
         { className: "calle-popup", closeButton: true, maxWidth: 240 },
@@ -94,7 +94,7 @@ export default function RestaurantMap() {
       ref={container}
       className="restaurant-map h-full w-full"
       role="application"
-      aria-label="Mapa interactivo de Callejero en la 19 Calle Sur, San Pedro Sula. Arrastrá para mover y usá los botones para acercar."
+      aria-label="Mapa interactivo de Callejero en River Plaza, 19 avenida 9 calle, San Pedro Sula. Arrastrá para mover y usá los botones para acercar."
     />
   );
 }

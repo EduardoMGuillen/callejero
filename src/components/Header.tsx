@@ -8,8 +8,8 @@ import { restaurant, waLink } from "@/lib/site";
 
 const links = [
   { href: "/#menu", label: "Menú" },
-  { href: "/#malteadas", label: "Malteadas" },
-  { href: "/#combo", label: "Combo" },
+  { href: "/#daily", label: "Daily Drop" },
+  { href: "/#combos", label: "Combos" },
   { href: "/#visita", label: "Local" },
   { href: "/carta", label: "Carta" },
 ];
@@ -47,7 +47,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-7 text-sm text-[#f4efe4]/80 lg:flex" aria-label="Principal">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-[#ffb000]">
+            <Link key={link.href} href={link.href} className="transition hover:text-[#e30613]">
               {link.label}
             </Link>
           ))}

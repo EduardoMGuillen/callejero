@@ -21,7 +21,7 @@ export default function OpenBadge({ compact = false }: { compact?: boolean }) {
   return (
     <span className="inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase">
       <span
-        className={`h-2 w-2 rounded-full ${state && open ? "bg-[#ffb000]" : "bg-current opacity-40"}`}
+        className={`h-2 w-2 rounded-full ${state && open ? "bg-[#e30613]" : "bg-current opacity-40"}`}
         aria-hidden
       />
       <span>{state ? (open ? "Abierto" : "Cerrado") : "Horario"}</span>

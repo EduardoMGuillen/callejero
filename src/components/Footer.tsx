@@ -8,7 +8,7 @@ export default function Footer() {
         href={restaurant.instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="display block text-[clamp(3rem,12vw,9rem)] leading-none transition hover:text-[#ffb000]"
+        className="display block text-[clamp(3rem,12vw,9rem)] leading-none transition hover:text-[#e30613]"
       >
         @{restaurant.instagram}
       </a>
@@ -18,33 +18,34 @@ export default function Footer() {
         <div>
           <p className="display text-6xl">Callejero</p>
           <p className="mt-3 max-w-sm text-sm text-white/60">
-            Smash burgers y malteadas en {restaurant.street}, {restaurant.city}.
+            {restaurant.line} en {restaurant.place}, {restaurant.street}, {restaurant.city}.
           </p>
         </div>
         <div>
           <p className="kicker text-white/40">En la web</p>
           <ul className="mt-4 space-y-2 text-lg">
-            <li><Link href="/#menu" className="hover:text-[#ffb000]">Menú</Link></li>
-            <li><Link href="/#combo" className="hover:text-[#ffb000]">Armar combo</Link></li>
-            <li><Link href="/carta" className="hover:text-[#ffb000]">Carta</Link></li>
-            <li><Link href="/#visita" className="hover:text-[#ffb000]">Local</Link></li>
+            <li><Link href="/#menu" className="hover:text-[#e30613]">Menú</Link></li>
+            <li><Link href="/#daily" className="hover:text-[#e30613]">Daily Drop</Link></li>
+            <li><Link href="/#combos" className="hover:text-[#e30613]">Combos</Link></li>
+            <li><Link href="/carta" className="hover:text-[#e30613]">Carta</Link></li>
+            <li><Link href="/#visita" className="hover:text-[#e30613]">Local</Link></li>
           </ul>
         </div>
         <div>
           <p className="kicker text-white/40">Contacto</p>
           <ul className="mt-4 space-y-2 text-lg">
             <li>
-              <a href={waLink("Hola Callejero, vengo de la web.")} target="_blank" rel="noopener noreferrer" className="hover:text-[#ffb000]">
+              <a href={waLink("Hola Callejero, vengo de la web.")} target="_blank" rel="noopener noreferrer" className="hover:text-[#e30613]">
                 WhatsApp {restaurant.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={restaurant.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#ffb000]">
+              <a href={restaurant.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#e30613]">
                 Instagram
               </a>
             </li>
             <li>
-              <a href={restaurant.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#ffb000]">
+              <a href={restaurant.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#e30613]">
                 Google Maps
               </a>
             </li>
@@ -56,7 +57,7 @@ export default function Footer() {
         <div>
           <p>© {new Date().getFullYear()} Callejero · {restaurant.city}</p>
           <p className="mt-1 max-w-xl text-xs leading-relaxed text-white/40">
-            Sitio demo. La carta y los precios son ilustrativos para mostrar la web. Confirmá en el local o por WhatsApp. Fotos de referencia.
+            Precios y fotos salen de las publicaciones de @callejero.hn. El Daily Drop es solo para comer en el restaurante. Confirmá disponibilidad por WhatsApp.
           </p>
         </div>
         <a
@@ -66,8 +67,8 @@ export default function Footer() {
           className="group inline-flex items-baseline gap-2 text-[#f4efe4]"
         >
           <span className="text-[10px] tracking-[0.28em] text-white/45 uppercase">Powered by</span>
-          <span className="display text-3xl tracking-wide group-hover:text-[#ffb000]">
-            Nexus <span className="text-white/70 group-hover:text-[#ffb000]">Global</span>
+          <span className="display text-3xl tracking-wide group-hover:text-[#e30613]">
+            Nexus <span className="text-white/70 group-hover:text-[#e30613]">Global</span>
           </span>
         </a>
       </div>

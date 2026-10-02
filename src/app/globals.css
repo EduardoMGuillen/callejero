@@ -5,7 +5,7 @@
   --ink-2: #1b1814;
   --paper: #f4efe4;
   --paper-2: #e7dfd0;
-  --amber: #ffb000;
+  --amber: #e30613;
   --muted: #b7aea2;
   --line: rgba(244, 239, 228, 0.16);
 }
@@ -51,7 +51,7 @@ body {
   min-height: 3.25rem;
   padding: 0.8rem 1.35rem;
   background: var(--amber);
-  color: #14120f;
+  color: #f6f1e6;
   font-family: var(--font-bebas), Impact, sans-serif;
   font-size: 1.45rem;
   letter-spacing: 0.08em;
@@ -86,7 +86,12 @@ body {
 .marquee {
   overflow: hidden;
   background: var(--amber);
-  color: #16130f;
+  color: #f6f1e6;
+}
+
+.brush {
+  font-family: var(--font-script), cursive;
+  line-height: 0.9;
 }
 
 .marquee-track {
@@ -145,8 +150,8 @@ body {
 }
 
 .btn-dark:hover {
-  background: #ffb000;
-  color: #16130f;
+  background: #e30613;
+  color: #f6f1e6;
 }
 
 .restaurant-map {
@@ -164,7 +169,7 @@ body {
   width: 52px;
   height: 52px;
   place-items: center;
-  background: #ffb000;
+  background: #e30613;
   border-radius: 50% 50% 50% 0;
   box-shadow: 0 12px 28px rgba(16, 14, 12, 0.35);
   transform: rotate(-45deg);
@@ -172,7 +177,7 @@ body {
 
 .calle-pin span {
   transform: rotate(45deg);
-  color: #16130f;
+  color: #f6f1e6;
   font-family: var(--font-bebas), Impact, sans-serif;
   font-size: 22px;
   letter-spacing: 0.04em;
@@ -195,8 +200,8 @@ body {
 }
 
 .restaurant-map .leaflet-control-zoom a:hover {
-  background: #ffb000;
-  color: #16130f;
+  background: #e30613;
+  color: #f6f1e6;
 }
 
 .restaurant-map .leaflet-bar {
@@ -234,7 +239,7 @@ body {
 
 .calle-card .calle-kicker {
   margin: 0;
-  color: #ffb000;
+  color: #e30613;
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.22em;
@@ -262,8 +267,8 @@ body {
 .calle-card a {
   display: inline-block;
   margin-top: 12px;
-  background: #ffb000;
-  color: #16130f;
+  background: #e30613;
+  color: #f6f1e6;
   font-family: var(--font-bebas), Impact, sans-serif;
   font-size: 20px;
   letter-spacing: 0.06em;

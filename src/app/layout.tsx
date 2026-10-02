@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Outfit } from "next/font/google";
+import { Bebas_Neue, Oleo_Script, Outfit } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MobileOrderBar from "@/components/MobileOrderBar";
@@ -17,8 +17,14 @@ const display = Bebas_Neue({
   variable: "--font-bebas",
 });
 
+const script = Oleo_Script({
+  weight: "700",
+  subsets: ["latin"],
+  variable: "--font-script",
+});
+
 const description =
-  "Smash burgers, malteadas y combos en la 19 Calle Sur, San Pedro Sula. Pedí por WhatsApp a Callejero.";
+  "Handmade smash burgers en River Plaza, 19 av. 9 calle, San Pedro Sula. De calle pero elegante. Pedí por WhatsApp a Callejero.";
 
 const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
@@ -27,23 +33,23 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Callejero · Smash burgers en San Pedro Sula",
+    default: "Callejero · Handmade smash burgers en San Pedro Sula",
     template: "%s · Callejero",
   },
   description,
   openGraph: {
-    title: "Callejero · Smash burgers en San Pedro Sula",
+    title: "Callejero · Handmade smash burgers en San Pedro Sula",
     description,
     siteName: "Callejero",
     locale: "es_HN",
     type: "website",
-    images: [{ url: "/food/oklahoma.jpg", width: 1200, height: 800, alt: "Smash burger de Callejero" }],
+    images: [{ url: "/food/web/drop-1.jpg", width: 1080, height: 1350, alt: "Smash burger de Callejero" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Callejero",
     description,
-    images: ["/food/oklahoma.jpg"],
+    images: ["/food/web/drop-1.jpg"],
   },
 };
 
@@ -59,7 +65,7 @@ const jsonLd = {
   name: restaurant.name,
   servesCuisine: ["Hamburguesas", "Smash burgers"],
   telephone: restaurant.phoneTel,
-  image: "/food/oklahoma.jpg",
+  image: "/food/web/drop-1.jpg",
   address: {
     "@type": "PostalAddress",
     streetAddress: restaurant.street,
@@ -97,12 +103,12 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${sans.variable} ${display.variable}`}>
+    <html lang="es" className={`${sans.variable} ${display.variable} ${script.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a
           href="#contenido"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[80] focus:bg-[#ffb000] focus:px-4 focus:py-2 focus:text-black"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[80] focus:bg-[#e30613] focus:px-4 focus:py-2 focus:text-black"
         >
           Saltar al contenido
         </a>

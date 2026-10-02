@@ -1,7 +1,13 @@
-import { burgers, shakes } from "@/lib/site";
+import { burgers, combos } from "@/lib/site";
 
 export default function Marquee() {
-  const items = [...burgers.map((burger) => burger.name), ...shakes.map((shake) => `Malteada ${shake.name}`), "Papas callejeras"];
+  const items = [
+    ...burgers.map((burger) => burger.name),
+    ...combos.map((combo) => combo.name),
+    "Daily Drop",
+    "De calle pero elegante",
+    "Bacon Cheese Fries",
+  ];
   const loop = [...items, ...items];
 
   return (

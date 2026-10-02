@@ -7,14 +7,14 @@ export default function Visit() {
     <section id="visita" className="scroll-mt-24 border-t border-white/10 bg-[#f4efe4] text-[#16130f]">
       <div className="grid lg:grid-cols-2">
         <div className="px-5 py-20 md:px-10 md:py-28">
-          <p className="kicker text-[#9a6b00]">El local</p>
+          <p className="kicker text-[#b42318]">El local</p>
           <h2 className="display mt-3 text-[clamp(3.8rem,9vw,8rem)]">
-            Estamos
+            River
             <br />
-            en la 19
+            Plaza
           </h2>
           <p className="mt-6 max-w-md text-lg leading-snug">
-            Un local chico en {restaurant.street}, {restaurant.city}. Pedís en la barra. Si hay mesa, adentro o en la calle, te quedás.
+            {restaurant.street}, {restaurant.neighborhood}. {restaurant.city}. De calle pero elegante.
           </p>
 
           <div className="mt-8 text-[#16130f]">
@@ -33,7 +33,7 @@ export default function Visit() {
             <div>
               <dt className="kicker text-black/45">WhatsApp y teléfono</dt>
               <dd className="mt-1 text-xl">
-                <a className="underline decoration-black/20 underline-offset-4 hover:decoration-[#ffb000]" href={`tel:${restaurant.phoneTel}`}>
+                <a className="underline decoration-black/20 underline-offset-4 hover:decoration-[#e30613]" href={`tel:${restaurant.phoneTel}`}>
                   {restaurant.phoneDisplay}
                 </a>
               </dd>
